@@ -1,0 +1,637 @@
+<!DOCTYPE html><html class="dark" lang="zh"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>宋欣 | 人工智能交与互应用讲师</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;family=Inter:wght@300..700&amp;family=JetBrains+Mono:wght@400..700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-highest": "#273644",
+                    "on-tertiary": "#2b3139",
+                    "surface-container-high": "#1c2b39",
+                    "primary-fixed-dim": "#3cd7ff",
+                    "surface-variant": "#273644",
+                    "secondary-fixed-dim": "#b9c7e4",
+                    "surface-bright": "#2b3b49",
+                    "on-secondary-fixed-variant": "#39475f",
+                    "outline": "#859398",
+                    "surface-container": "#11212e",
+                    "on-primary-fixed": "#001f27",
+                    "on-secondary-fixed": "#0d1c32",
+                    "surface-container-low": "#0d1d2a",
+                    "outline-variant": "#3c494e",
+                    "error": "#ffb4ab",
+                    "surface": "#041521",
+                    "surface-dim": "#041521",
+                    "on-secondary-container": "#abb9d6",
+                    "tertiary-container": "#bdc3cd",
+                    "primary-fixed": "#b4ebff",
+                    "surface-tint": "#3cd7ff",
+                    "tertiary-fixed-dim": "#c1c7d1",
+                    "secondary-container": "#3c4962",
+                    "on-primary-fixed-variant": "#004e5f",
+                    "on-primary": "#003642",
+                    "inverse-on-surface": "#223240",
+                    "secondary-fixed": "#d6e3ff",
+                    "on-surface": "#d4e4f6",
+                    "secondary": "#b9c7e4",
+                    "on-surface-variant": "#bbc9cf",
+                    "primary": "#a8e8ff",
+                    "on-tertiary-container": "#4a5059",
+                    "error-container": "#93000a",
+                    "on-tertiary-fixed": "#161c23",
+                    "on-error-container": "#ffdad6",
+                    "tertiary-fixed": "#dde3ed",
+                    "tertiary": "#d9dfe9",
+                    "on-primary-container": "#00586b",
+                    "surface-container-lowest": "#010f1c",
+                    "inverse-surface": "#d4e4f6",
+                    "on-background": "#d4e4f6",
+                    "on-secondary": "#233148",
+                    "inverse-primary": "#00677e",
+                    "background": "#041521",
+                    "on-error": "#690005",
+                    "on-tertiary-fixed-variant": "#41474f",
+                    "primary-container": "#00d4ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-desktop": "64px",
+                    "container-max": "1280px",
+                    "gutter": "24px",
+                    "unit": "8px",
+                    "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Space Grotesk"],
+                    "label-sm": ["JetBrains Mono"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Space Grotesk"],
+                    "display-lg-mobile": ["Space Grotesk"]
+            },
+            "fontSize": {
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-sm": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "display-lg-mobile": ["36px", {"lineHeight": "1.2", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(17, 33, 46, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(60, 215, 255, 0.1);
+            transition: all 0.3s ease-in-out;
+        }
+        .glass-card:hover {
+            border: 1px solid rgba(60, 215, 255, 0.4);
+            box-shadow: 0 0 20px rgba(60, 215, 255, 0.1);
+        }
+        .text-glow {
+            text-shadow: 0 0 10px rgba(168, 232, 255, 0.3);
+        }
+        body {
+            background-color: #041521;
+            background-image: radial-gradient(circle at top right, #0d1d2a 0%, #041521 50%), radial-gradient(circle at bottom left, #010f1c 0%, #041521 50%);
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body class="text-on-surface selection:bg-primary/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/70 backdrop-blur-xl border-b border-outline-variant/30">
+<div class="max-w-container-max mx-auto px-margin-desktop flex justify-between items-center h-20">
+<div class="font-display-lg text-headline-md text-primary-fixed-dim tracking-tighter">宋欣</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="#about">关于</a>
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="#courses">课程</a>
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="#portfolio">项目案例</a>
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="#contact">联系我</a>
+</div>
+<button class="active:scale-95 transition-transform bg-primary-container text-on-primary-container font-label-sm text-label-sm uppercase tracking-widest px-6 py-3 rounded-full hover:bg-primary transition-all">
+                预约咨询
+            </button>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="min-h-[921px] flex items-center max-w-container-max mx-auto px-margin-desktop py-20">
+<div class="grid md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-7 space-y-8">
+<div class="inline-flex items-center gap-2 px-4 py-2 bg-surface-container-highest/50 rounded-full border border-primary/20">
+<span class="material-symbols-outlined text-primary text-[16px]" style="font-variation-settings: &quot;FILL&quot; 1;">terminal</span>
+<span class="font-label-sm text-label-sm text-primary uppercase">头部 AI 社群教练</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-glow leading-tight">简单技术 <br><span class="text-primary-fixed-dim">解决复杂问题</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                        人工智能交与互应用讲师，从事 AI 教育培训两年，累计授课百节、学员千名。专注用简单技术解决复杂问题，让每个人都能驾驭 AI。
+                    </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="bg-primary text-on-primary font-label-sm text-label-sm uppercase px-8 py-4 tracking-widest hover:brightness-110 active:scale-95 transition-all">
+                            预约咨询
+                        </button>
+<button class="border border-primary text-primary font-label-sm text-label-sm uppercase px-8 py-4 tracking-widest hover:bg-primary/10 active:scale-95 transition-all">
+                            查看课程大纲
+                        </button>
+</div>
+</div>
+<div class="md:col-span-5 relative flex justify-center">
+<div class="w-72 glass-card rounded-xl overflow-hidden border-2 border-primary/30 p-2">
+<img class="w-full h-full object-cover rounded-lg" alt="宋欣 - 人工智能交与互应用讲师" src="assets/portrait.png">
+</div>
+</div>
+</div>
+</section>
+<!-- About Me Section -->
+<section class="py-24 bg-surface-container-lowest/30" id="about">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="max-w-4xl mx-auto">
+<div class="grid md:grid-cols-2 gap-12 items-center">
+<div>
+<h2 class="font-display-lg text-headline-md mb-6">化繁为简，<br><span class="text-primary-fixed-dim">让 AI 触手可及</span></h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6 leading-relaxed">
+                                我是宋欣，人工智能交与互应用讲师。两年来深耕 AI 教育培训行业，累计授课百节，培训学员千余名，担任头部 AI 社群教练。
+                            </p>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                                我的信条很简单：用简单的技术解决复杂的问题。AI 不应是少数人的专利，我致力于让每个人都能轻松驾驭人工智能，将前沿技术转化为人人可用的生产力工具。
+                            </p>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="glass-card p-6 flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary mb-2" style="font-variation-settings: &quot;FILL&quot; 1;">school</span>
+<span class="font-label-sm text-label-sm">AI 教学培训</span>
+</div>
+<div class="glass-card p-6 flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary mb-2" style="font-variation-settings: &quot;FILL&quot; 1;">groups</span>
+<span class="font-label-sm text-label-sm">社群教练</span>
+</div>
+<div class="glass-card p-6 flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary mb-2" style="font-variation-settings: &quot;FILL&quot; 1;">touch_app</span>
+<span class="font-label-sm text-label-sm">交互应用</span>
+</div>
+<div class="glass-card p-6 flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-primary mb-2" style="font-variation-settings: &quot;FILL&quot; 1;">build</span>
+<span class="font-label-sm text-label-sm">简技解难</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Certifications -->
+<section class="py-24">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-display-lg text-headline-md">专业技术认证</h2>
+</div>
+<!-- Highlight certificate -->
+<div class="glass-card rounded-xl overflow-hidden mb-8 border border-primary/20">
+<div class="grid md:grid-cols-2 items-center">
+<div class="p-8 md:p-10">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 rounded-full mb-4">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-sm text-[10px] uppercase text-primary tracking-widest">最新认证</span>
+</div>
+<h3 class="font-display-lg text-headline-md mb-3">阿里达摩院</h3>
+<p class="font-body-lg text-body-lg text-primary-fixed-dim mb-4 font-semibold">认证人工智能训练师（高级）</p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">
+已完成达摩院智能客服「人工智能训练师」高级培训课程且认证合格。
+</p>
+<div class="flex flex-wrap gap-4 text-sm text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-base" style="font-variation-settings: 'FILL' 1;">badge</span>
+证书编号：AIT250413154243000121
+</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-base" style="font-variation-settings: 'FILL' 1;">event</span>
+颁证日期：2025-04-13
+</span>
+</div>
+</div>
+<div class="p-4">
+<img src="assets/damo-certificate.png" alt="阿里达摩院认证人工智能训练师证书" class="w-full rounded-lg shadow-2xl shadow-primary/10 hover:scale-[1.02] transition-transform duration-500">
+</div>
+</div>
+</div>
+<!-- Other certifications -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="glass-card rounded-xl overflow-hidden group">
+<div class="aspect-[16/10] overflow-hidden bg-surface-container flex items-center justify-center">
+<img src="assets/yingdao-certificate.png" alt="影刀高级RPA技能证书" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500">
+</div>
+<div class="p-6 flex items-center gap-4">
+<div class="h-12 w-12 bg-primary/10 rounded-2xl flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-0.5">影刀学院</p>
+<p class="font-label-sm text-label-sm font-semibold">高级 RPA 技能证书</p>
+</div>
+</div>
+</div>
+<div class="glass-card rounded-xl overflow-hidden group">
+<div class="aspect-[16/10] overflow-hidden bg-surface-container flex items-center justify-center">
+<img src="assets/huawei-certificate.png" alt="华为HarmonyOS应用开发者基础认证" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500">
+</div>
+<div class="p-6 flex items-center gap-4">
+<div class="h-12 w-12 bg-primary/10 rounded-2xl flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings: 'FILL' 1;">cloud</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mb-0.5">华为开发者学堂</p>
+<p class="font-label-sm text-label-sm font-semibold">HarmonyOS 应用开发者基础认证</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Teaching Scenes -->
+<section class="py-24 bg-surface-container-lowest/30">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-display-lg text-headline-md">教学现场<span class="text-primary-fixed-dim">展示</span></h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-4 max-w-2xl mx-auto">
+真实授课场景，每一节课都全力以赴。
+</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="glass-card rounded-xl overflow-hidden group">
+<div class="aspect-[4/3] overflow-hidden">
+<img src="assets/teaching-1.png" alt="线下实战培训课堂" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+</div>
+<div class="p-5">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary text-base" style="font-variation-settings: 'FILL' 1;">groups</span>
+<span class="font-label-sm text-label-sm text-primary uppercase">线下实战</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">小班制面对面教学，学员现场实操，讲师即时指导答疑。</p>
+</div>
+</div>
+<div class="glass-card rounded-xl overflow-hidden group">
+<div class="aspect-[4/3] overflow-hidden">
+<img src="assets/teaching-2.png" alt="品牌活动演讲现场" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+</div>
+<div class="p-5">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary text-base" style="font-variation-settings: 'FILL' 1;">campaign</span>
+<span class="font-label-sm text-label-sm text-primary uppercase">活动演讲</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">受邀出席品牌活动，分享 AI 实战经验与应用方法论。</p>
+</div>
+</div>
+<div class="glass-card rounded-xl overflow-hidden group">
+<div class="aspect-[4/3] overflow-hidden">
+<img src="assets/teaching-3.jpg" alt="技术演示授课" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+</div>
+<div class="p-5">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary text-base" style="font-variation-settings: 'FILL' 1;">screen_share</span>
+<span class="font-label-sm text-label-sm text-primary uppercase">技术演示</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">现场演示 AI 工具操作流程，用简单技术解决复杂问题。</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Courses -->
+<section class="py-24 bg-surface-container-low" id="courses">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="mb-12">
+<h2 class="font-display-lg text-headline-md">用简单方式<span class="text-primary-fixed-dim">学会 AI</span></h2>
+</div>
+<div class="grid md:grid-cols-3 gap-gutter">
+<!-- Course 1 -->
+<div class="glass-card overflow-hidden flex flex-col">
+<div class="h-48 relative overflow-hidden bg-gradient-to-br from-surface-container-high to-surface-container flex items-center justify-center">
+<div class="absolute top-4 right-4 px-3 py-1 bg-primary text-on-primary rounded font-label-sm text-label-sm">最畅销</div>
+<img src="assets/claude-logo.png" alt="Claude" class="h-24 w-auto object-contain opacity-80">
+</div>
+<div class="p-8 flex-1 flex flex-col">
+<div class="flex gap-2 mb-4">
+<span class="bg-surface-container-highest px-2 py-1 rounded text-[10px] font-label-sm text-primary uppercase">编程</span>
+<span class="bg-surface-container-highest px-2 py-1 rounded text-[10px] font-label-sm text-primary uppercase">AI 工具</span>
+</div>
+<h4 class="font-headline-md text-headline-md mb-4 text-glow">Claude Code Skill 从零到一</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 flex-1">
+                                从零掌握 Claude Code 的核心技能，学会用 AI 编程助手提升开发效率。无需深厚编程基础，手把手带你入门到实战。
+                            </p>
+<button class="w-full border border-primary/30 py-3 font-label-sm text-label-sm uppercase hover:bg-primary hover:text-on-primary transition-all">立即报名</button>
+</div>
+</div>
+<!-- Course 2 -->
+<div class="glass-card overflow-hidden flex flex-col">
+<div class="h-48 relative overflow-hidden bg-gradient-to-br from-surface-container-high to-surface-container flex items-center justify-center">
+<img src="assets/coze-logo.png" alt="扣子 Coze" class="h-24 w-auto object-contain opacity-80">
+</div>
+<div class="p-8 flex-1 flex flex-col">
+<div class="flex gap-2 mb-4">
+<span class="bg-surface-container-highest px-2 py-1 rounded text-[10px] font-label-sm text-primary uppercase">工作流</span>
+<span class="bg-surface-container-highest px-2 py-1 rounded text-[10px] font-label-sm text-primary uppercase">新手友好</span>
+</div>
+<h4 class="font-headline-md text-headline-md mb-4 text-glow">Coze 工作流新手教程</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 flex-1">
+                                零基础学会用 Coze 搭建自动化工作流，将复杂任务拆解为简单节点。让 AI 替你完成重复劳动，效率翻倍。
+                            </p>
+<button class="w-full border border-primary/30 py-3 font-label-sm text-label-sm uppercase hover:bg-primary hover:text-on-primary transition-all">立即报名</button>
+</div>
+</div>
+<!-- Course 3 -->
+<div class="glass-card overflow-hidden flex flex-col">
+<div class="h-48 relative overflow-hidden bg-gradient-to-br from-surface-container-high to-surface-container flex items-center justify-center">
+<img src="assets/feishu-logo.png" alt="飞书 Feishu" class="h-24 w-auto object-contain opacity-80">
+</div>
+<div class="p-8 flex-1 flex flex-col">
+<div class="flex gap-2 mb-4">
+<span class="bg-surface-container-highest px-2 py-1 rounded text-[10px] font-label-sm text-primary uppercase">办公提效</span>
+<span class="bg-surface-container-highest px-2 py-1 rounded text-[10px] font-label-sm text-primary uppercase">实战</span>
+</div>
+<h4 class="font-headline-md text-headline-md mb-4 text-glow">AI 办公提效指南</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 flex-1">
+                                用 AI 工具重塑日常办公流程——文档撰写、数据处理、PPT 制作、邮件回复，每个环节都能用简单方法提速 10 倍。
+                            </p>
+<button class="w-full border border-primary/30 py-3 font-label-sm text-label-sm uppercase hover:bg-primary hover:text-on-primary transition-all">立即报名</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Portfolio -->
+<section class="py-24" id="portfolio">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="mb-12">
+<h2 class="font-display-lg text-headline-md">实战应用案例</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Project 1 -->
+<div class="glass-card rounded-xl p-8 group cursor-pointer relative overflow-hidden" onclick="showWatermarkModal()">
+<div class="absolute top-0 right-0 w-48 h-48 bg-primary/10 rounded-full blur-[80px] -mr-24 -mt-24"></div>
+<div class="flex items-center gap-3 mb-4">
+<div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">water_drop</span>
+</div>
+<div>
+<h4 class="font-display-lg text-lg font-semibold">微信去水印小程序</h4>
+<span class="font-label-sm text-[10px] uppercase text-primary tracking-wider">微信生态</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+一键去除微信图片/视频水印，简化内容二次创作流程。用最简单的技术解决日常高频痛点，零门槛上手。
+</p>
+<div class="flex flex-wrap gap-2">
+<span class="font-label-sm text-label-sm text-primary bg-primary/10 px-3 py-1 rounded">小程序</span>
+<span class="font-label-sm text-label-sm text-primary bg-primary/10 px-3 py-1 rounded">图像处理</span>
+<span class="font-label-sm text-label-sm text-primary bg-primary/10 px-3 py-1 rounded">工具型产品</span>
+</div>
+<div class="mt-4 flex items-center gap-1 text-primary text-sm">
+<span class="material-symbols-outlined text-base">qr_code_scanner</span>
+<span class="font-label-sm text-label-sm">点击扫码使用</span>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="glass-card rounded-xl p-8 group cursor-pointer relative overflow-hidden">
+<div class="absolute top-0 right-0 w-48 h-48 bg-secondary/10 rounded-full blur-[80px] -mr-24 -mt-24"></div>
+<div class="flex items-center gap-3 mb-4">
+<div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">edit_note</span>
+</div>
+<div>
+<h4 class="font-display-lg text-lg font-semibold">微信图片添加文字小程序</h4>
+<span class="font-label-sm text-[10px] uppercase text-primary tracking-wider">微信生态</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+为微信图片快速添加自定义文字水印、标注和说明，操作极简。让普通用户也能轻松完成专业图片编辑。
+</p>
+<div class="flex flex-wrap gap-2">
+<span class="font-label-sm text-label-sm text-primary bg-primary/10 px-3 py-1 rounded">小程序</span>
+<span class="font-label-sm text-label-sm text-primary bg-primary/10 px-3 py-1 rounded">图文编辑</span>
+<span class="font-label-sm text-label-sm text-primary bg-primary/10 px-3 py-1 rounded">工具型产品</span>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="glass-card rounded-xl p-8 group cursor-pointer relative overflow-hidden">
+<div class="absolute top-0 right-0 w-48 h-48 bg-primary/10 rounded-full blur-[80px] -mr-24 -mt-24"></div>
+<div class="flex items-center gap-3 mb-4">
+<div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+<div>
+<h4 class="font-display-lg text-lg font-semibold">扣子批量图文生成</h4>
+<span class="font-label-sm text-[10px] uppercase text-primary tracking-wider">AI 应用</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+基于扣子平台实现批量图文内容自动生成，大幅提升自媒体运营效率。用 AI 自动化替代重复劳动，简单技术解决复杂问题。
+</p>
+<div class="flex flex-wrap gap-2">
+<span class="font-label-sm text-label-sm text-primary bg-primary/10 px-3 py-1 rounded">扣子 Coze</span>
+<span class="font-label-sm text-label-sm text-primary bg-primary/10 px-3 py-1 rounded">批量生成</span>
+<span class="font-label-sm text-label-sm text-primary bg-primary/10 px-3 py-1 rounded">AI 自动化</span>
+</div>
+</div>
+<!-- Project 4 -->
+<div class="glass-card rounded-xl p-8 group cursor-pointer relative overflow-hidden" onclick="showApiModal()">
+<div class="absolute top-0 right-0 w-48 h-48 bg-secondary/10 rounded-full blur-[80px] -mr-24 -mt-24"></div>
+<div class="flex items-center gap-3 mb-4">
+<div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">hub</span>
+</div>
+<div>
+<h4 class="font-display-lg text-lg font-semibold">蓝博 API 中转站</h4>
+<span class="font-label-sm text-[10px] uppercase text-primary tracking-wider">开发者工具</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+为开发者提供统一的 API 中转服务，降低多平台接口对接复杂度。一个入口，简化所有 API 调用，让开发更高效。
+</p>
+<div class="flex flex-wrap gap-2">
+<span class="font-label-sm text-label-sm text-primary bg-primary/10 px-3 py-1 rounded">API 中转</span>
+<span class="font-label-sm text-label-sm text-primary bg-primary/10 px-3 py-1 rounded">开发者服务</span>
+<span class="font-label-sm text-label-sm text-primary bg-primary/10 px-3 py-1 rounded">效率工具</span>
+</div>
+<div class="mt-4 flex items-center gap-1 text-primary text-sm">
+<span class="material-symbols-outlined text-base">open_in_new</span>
+<span class="font-label-sm text-label-sm">点击访问</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-24">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid md:grid-cols-3 gap-gutter">
+<div class="glass-card p-10 flex flex-col">
+<span class="material-symbols-outlined text-primary text-4xl mb-6 format_quote_hidden" style="display:none;">format_quote</span>
+<p class="font-body-lg text-body-lg text-on-surface italic mb-8 flex-1">
+                            "跟着宋欣老师学完 Claude Code Skill，我从一个完全不懂编程的小白，到现在已经能独立用 AI 工具写自动化脚本了。简单技术真能解决大问题！"
+                        </p>
+<div>
+<div class="font-label-sm text-label-sm font-bold uppercase">刘思远</div>
+<div class="font-label-sm text-[10px] text-on-surface-variant">自媒体运营 · 长沙</div>
+</div>
+</div>
+<div class="glass-card p-10 flex flex-col">
+<span class="material-symbols-outlined text-primary text-4xl mb-6 format_quote_hidden" style="display:none;">format_quote</span>
+<p class="font-body-lg text-body-lg text-on-surface italic mb-8 flex-1">
+                            "Coze 工作流课程太实用了！以前每天花 3 小时做的图文内容，现在用工作流 10 分钟搞定。宋老师的课就是为普通人设计的，零门槛。"
+                        </p>
+<div>
+<div class="font-label-sm text-label-sm font-bold uppercase">张雨涵</div>
+<div class="font-label-sm text-[10px] text-on-surface-variant">电商创业者 · 深圳</div>
+</div>
+</div>
+<div class="glass-card p-10 flex flex-col">
+<span class="material-symbols-outlined text-primary text-4xl mb-6 format_quote_hidden" style="display:none;">format_quote</span>
+<p class="font-body-lg text-body-lg text-on-surface italic mb-8 flex-1">
+                            "AI 办公提效课直接改变了我的工作方式。以前写方案要一整天，现在用 AI 辅助两小时就搞定。宋老师教的方法都是即学即用，绝不绕弯。"
+                        </p>
+<div>
+<div class="font-label-sm text-label-sm font-bold uppercase">陈佳欣</div>
+<div class="font-label-sm text-[10px] text-on-surface-variant">产品经理 · 杭州</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Me -->
+<section class="py-24 bg-surface-container-low/50" id="contact">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="max-w-2xl mx-auto text-center">
+<h2 class="font-display-lg text-headline-md mb-6">添加微信 <br><span class="text-primary-fixed-dim">开启 AI 之旅</span></h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12">
+想了解更多课程详情或预约咨询？添加我的微信，随时沟通。
+</p>
+<div class="glass-card p-10 rounded-xl inline-block">
+<div class="flex flex-col items-center gap-6">
+<div class="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: 'FILL' 1;">qr_code_2</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest mb-2">微信号</p>
+<button id="wechat-btn" class="bg-primary text-on-primary font-label-sm text-label-sm uppercase tracking-widest px-8 py-3 rounded-full hover:brightness-110 active:scale-95 transition-all flex items-center gap-2" onclick="navigator.clipboard.writeText('18124221616'); document.getElementById('wechat-btn-text').textContent='已复制！'; setTimeout(()=>{document.getElementById('wechat-btn-text').textContent='点击复制微信号';}, 2000);">
+<span class="material-symbols-outlined text-base">content_copy</span>
+<span id="wechat-btn-text">点击复制微信号</span>
+</button>
+<div class="font-display-lg text-headline-md text-primary-fixed-dim mt-3">18124221616</div>
+</div>
+</div>
+</div>
+<div class="mt-12 flex flex-col md:flex-row justify-center items-center gap-8">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">mail</span>
+</div>
+<a href="mailto:1821522570@qq.com" class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors">1821522570@qq.com</a>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">中国长沙</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest w-full py-12 border-t border-outline-variant/20">
+<div class="max-w-container-max mx-auto px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-gutter">
+<div class="font-display-lg text-body-lg text-primary">宋欣</div>
+<div class="font-body-md text-body-md text-on-surface-variant">© 2025 宋欣. 专注用简单技术解决复杂问题。</div>
+<div class="flex gap-6">
+<a class="text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100" href="mailto:1821522570@qq.com">邮箱</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#contact">微信</a>
+</div>
+</div>
+</footer>
+
+<!-- Watermark Mini Program Modal -->
+<div id="watermark-modal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/60 backdrop-blur-sm" onclick="if(event.target===this)closeWatermarkModal()">
+<div class="glass-card p-8 rounded-xl max-w-sm w-full mx-4 text-center border border-primary/30">
+<div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">water_drop</span>
+</div>
+<h3 class="font-display-lg text-xl font-semibold mb-2">微信去水印小程序</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">微信扫码可用，支持豆包去水印</p>
+<div class="bg-surface-container rounded-lg p-4 mb-6 flex items-center justify-center">
+<img src="assets/qrcode-watermark.jpg" alt="去水印小程序二维码" class="w-56 h-56 object-contain rounded">
+</div>
+<button onclick="closeWatermarkModal()" class="w-full border border-outline-variant/50 text-on-surface-variant font-label-sm text-label-sm uppercase tracking-widest py-3 rounded-lg hover:bg-surface-container-highest transition-all">关闭</button>
+</div>
+</div>
+
+<!-- API Modal -->
+<div id="api-modal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/60 backdrop-blur-sm" onclick="if(event.target===this)closeApiModal()">
+<div class="glass-card p-8 rounded-xl max-w-md w-full mx-4 text-center border border-primary/30">
+<div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">hub</span>
+</div>
+<h3 class="font-display-lg text-headline-md mb-2">蓝博 API 中转站</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">复制以下链接，在浏览器中打开访问</p>
+<div class="bg-surface-container rounded-lg p-4 mb-6 flex items-center justify-between gap-3">
+<code class="font-label-sm text-label-sm text-primary-fixed-dim break-all">https://api.lanbuff.top/</code>
+<button onclick="copyApiLink()" class="flex-shrink-0 bg-primary/10 hover:bg-primary/20 text-primary px-3 py-2 rounded-lg transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-base" id="copy-icon">content_copy</span>
+<span class="font-label-sm text-[10px] uppercase" id="copy-text">复制</span>
+</button>
+</div>
+<button onclick="closeApiModal()" class="w-full border border-outline-variant/50 text-on-surface-variant font-label-sm text-label-sm uppercase tracking-widest py-3 rounded-lg hover:bg-surface-container-highest transition-all">关闭</button>
+</div>
+</div>
+
+<script>
+function showWatermarkModal() {
+    const modal = document.getElementById('watermark-modal');
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+}
+function closeWatermarkModal() {
+    const modal = document.getElementById('watermark-modal');
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+}
+function showApiModal() {
+    const modal = document.getElementById('api-modal');
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    document.getElementById('copy-icon').textContent = 'content_copy';
+    document.getElementById('copy-text').textContent = '复制';
+}
+function closeApiModal() {
+    const modal = document.getElementById('api-modal');
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+}
+function copyApiLink() {
+    navigator.clipboard.writeText('https://api.lanbuff.top/');
+    document.getElementById('copy-icon').textContent = 'check';
+    document.getElementById('copy-text').textContent = '已复制';
+    setTimeout(() => {
+        document.getElementById('copy-icon').textContent = 'content_copy';
+        document.getElementById('copy-text').textContent = '复制';
+    }, 2000);
+}
+</script>
+
+
+</body></html>
