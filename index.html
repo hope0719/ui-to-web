@@ -1,638 +1,224 @@
-<!DOCTYPE html><html class="dark" lang="zh"><head>
-<meta charset="utf-8">
-<meta http-equiv="Cache-Control" content="max-age=31536000, immutable">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>宋欣 | 人工智能交与互应用讲师</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;family=Inter:wght@300..700&amp;family=JetBrains+Mono:wght@400..700&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "surface-container-highest": "#273644",
-                    "on-tertiary": "#2b3139",
-                    "surface-container-high": "#1c2b39",
-                    "primary-fixed-dim": "#3cd7ff",
-                    "surface-variant": "#273644",
-                    "secondary-fixed-dim": "#b9c7e4",
-                    "surface-bright": "#2b3b49",
-                    "on-secondary-fixed-variant": "#39475f",
-                    "outline": "#859398",
-                    "surface-container": "#11212e",
-                    "on-primary-fixed": "#001f27",
-                    "on-secondary-fixed": "#0d1c32",
-                    "surface-container-low": "#0d1d2a",
-                    "outline-variant": "#3c494e",
-                    "error": "#ffb4ab",
-                    "surface": "#041521",
-                    "surface-dim": "#041521",
-                    "on-secondary-container": "#abb9d6",
-                    "tertiary-container": "#bdc3cd",
-                    "primary-fixed": "#b4ebff",
-                    "surface-tint": "#3cd7ff",
-                    "tertiary-fixed-dim": "#c1c7d1",
-                    "secondary-container": "#3c4962",
-                    "on-primary-fixed-variant": "#004e5f",
-                    "on-primary": "#003642",
-                    "inverse-on-surface": "#223240",
-                    "secondary-fixed": "#d6e3ff",
-                    "on-surface": "#d4e4f6",
-                    "secondary": "#b9c7e4",
-                    "on-surface-variant": "#bbc9cf",
-                    "primary": "#a8e8ff",
-                    "on-tertiary-container": "#4a5059",
-                    "error-container": "#93000a",
-                    "on-tertiary-fixed": "#161c23",
-                    "on-error-container": "#ffdad6",
-                    "tertiary-fixed": "#dde3ed",
-                    "tertiary": "#d9dfe9",
-                    "on-primary-container": "#00586b",
-                    "surface-container-lowest": "#010f1c",
-                    "inverse-surface": "#d4e4f6",
-                    "on-background": "#d4e4f6",
-                    "on-secondary": "#233148",
-                    "inverse-primary": "#00677e",
-                    "background": "#041521",
-                    "on-error": "#690005",
-                    "on-tertiary-fixed-variant": "#41474f",
-                    "primary-container": "#00d4ff"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.125rem",
-                    "lg": "0.25rem",
-                    "xl": "0.5rem",
-                    "full": "0.75rem"
-            },
-            "spacing": {
-                    "margin-desktop": "64px",
-                    "container-max": "1280px",
-                    "gutter": "24px",
-                    "unit": "8px",
-                    "margin-mobile": "20px"
-            },
-            "fontFamily": {
-                    "display-lg": ["Space Grotesk"],
-                    "label-sm": ["JetBrains Mono"],
-                    "body-md": ["Inter"],
-                    "body-lg": ["Inter"],
-                    "headline-md": ["Space Grotesk"],
-                    "display-lg-mobile": ["Space Grotesk"]
-            },
-            "fontSize": {
-                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
-                    "label-sm": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "500"}],
-                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
-                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
-                    "display-lg-mobile": ["36px", {"lineHeight": "1.2", "fontWeight": "700"}]
-            }
-          },
-        },
-      }
-    </script>
-<style>
-        .glass-card {
-            background: rgba(17, 33, 46, 0.7);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(60, 215, 255, 0.1);
-            transition: all 0.3s ease-in-out;
-        }
-        .glass-card:hover {
-            border: 1px solid rgba(60, 215, 255, 0.4);
-            box-shadow: 0 0 20px rgba(60, 215, 255, 0.1);
-        }
-        .text-glow {
-            text-shadow: 0 0 10px rgba(168, 232, 255, 0.3);
-        }
-        body {
-            background-color: #041521;
-            background-image: radial-gradient(circle at top right, #0d1d2a 0%, #041521 50%), radial-gradient(circle at bottom left, #010f1c 0%, #041521 50%);
-            background-attachment: fixed;
-        }
-    </style>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>从 UI 设计到网站上线｜网页制作教程</title>
+  <meta name="description" content="系统梳理从 UI 设计、代码实现到 GitHub Pages、Cloudflare Pages 静态部署的完整网页制作流程。" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ffd166'/%3E%3Cpath d='M16 22h32M16 32h22M16 42h28' stroke='%23151515' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="css/style.css?v=single-screen-2" />
 </head>
-<body class="text-on-surface selection:bg-primary/30">
-<!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-surface/70 backdrop-blur-xl border-b border-outline-variant/30">
-<div class="max-w-container-max mx-auto px-margin-desktop flex justify-between items-center h-20">
-<div class="font-display-lg text-headline-md text-primary-fixed-dim tracking-tighter">宋欣</div>
-<div class="hidden md:flex items-center gap-10">
-<a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="#about">关于</a>
-<a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="#courses">课程</a>
-<a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="#portfolio">项目案例</a>
-<a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="#contact">联系我</a>
-</div>
-<button class="active:scale-95 transition-transform bg-primary-container text-on-primary-container font-label-sm text-label-sm uppercase tracking-widest px-6 py-3 rounded-full hover:bg-primary transition-all">
-                预约咨询
-            </button>
-</div>
-</nav>
-<main class="pt-20">
-<!-- Hero Section -->
-<section class="min-h-[921px] flex items-center max-w-container-max mx-auto px-margin-desktop py-20">
-<div class="grid md:grid-cols-12 gap-gutter items-center">
-<div class="md:col-span-7 space-y-8">
-<div class="inline-flex items-center gap-2 px-4 py-2 bg-surface-container-highest/50 rounded-full border border-primary/20">
-<span class="material-symbols-outlined text-primary text-[16px]" style="font-variation-settings: &quot;FILL&quot; 1;">terminal</span>
-<span class="font-label-sm text-label-sm text-primary uppercase">头部 AI 社群教练</span>
-</div>
-<h1 class="font-display-lg text-display-lg text-glow leading-tight">简单技术 <br><span class="text-primary-fixed-dim">解决复杂问题</span></h1>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
-                        人工智能交与互应用讲师，从事 AI 教育培训两年，累计授课百节、学员千名。专注用简单技术解决复杂问题，让每个人都能驾驭 AI。
-                    </p>
-<div class="flex flex-wrap gap-4 pt-4">
-<button class="bg-primary text-on-primary font-label-sm text-label-sm uppercase px-8 py-4 tracking-widest hover:brightness-110 active:scale-95 transition-all">
-                            预约咨询
-                        </button>
-<button class="border border-primary text-primary font-label-sm text-label-sm uppercase px-8 py-4 tracking-widest hover:bg-primary/10 active:scale-95 transition-all">
-                            查看课程大纲
-                        </button>
-</div>
-</div>
-<div class="md:col-span-5 relative flex justify-center">
-<div class="w-72 glass-card rounded-xl overflow-hidden border-2 border-primary/30 p-2">
-<img class="w-full h-full object-cover rounded-lg" loading="lazy" decoding="async" src="images/portrait.jpg">
-</div>
-</div>
-</div>
-</section>
-<!-- About Me Section -->
-<section class="py-24 bg-surface-container-lowest/30" id="about">
-<div class="max-w-container-max mx-auto px-margin-desktop">
-<div class="max-w-4xl mx-auto">
-<div class="grid md:grid-cols-2 gap-12 items-center">
-<div>
-<h2 class="font-display-lg text-headline-md mb-6">化繁为简，<br><span class="text-primary-fixed-dim">让 AI 触手可及</span></h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant mb-6 leading-relaxed">
-                                我是宋欣，人工智能交与互应用讲师。两年来深耕 AI 教育培训行业，累计授课百节，培训学员千余名，担任头部 AI 社群教练。
-                            </p>
-<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
-                                我的信条很简单：用简单的技术解决复杂的问题。AI 不应是少数人的专利，我致力于让每个人都能轻松驾驭人工智能，将前沿技术转化为人人可用的生产力工具。
-                            </p>
-</div>
-<div class="grid grid-cols-2 gap-4">
-<div class="glass-card p-6 flex flex-col items-center text-center">
-<span class="material-symbols-outlined text-primary mb-2" style="font-variation-settings: &quot;FILL&quot; 1;">school</span>
-<span class="font-label-sm text-label-sm">AI 教学培训</span>
-</div>
-<div class="glass-card p-6 flex flex-col items-center text-center">
-<span class="material-symbols-outlined text-primary mb-2" style="font-variation-settings: &quot;FILL&quot; 1;">groups</span>
-<span class="font-label-sm text-label-sm">社群教练</span>
-</div>
-<div class="glass-card p-6 flex flex-col items-center text-center">
-<span class="material-symbols-outlined text-primary mb-2" style="font-variation-settings: &quot;FILL&quot; 1;">touch_app</span>
-<span class="font-label-sm text-label-sm">交互应用</span>
-</div>
-<div class="glass-card p-6 flex flex-col items-center text-center">
-<span class="material-symbols-outlined text-primary mb-2" style="font-variation-settings: &quot;FILL&quot; 1;">build</span>
-<span class="font-label-sm text-label-sm">简技解难</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Certifications -->
-<section class="py-24">
-<div class="max-w-container-max mx-auto px-margin-desktop">
-<div class="text-center mb-16">
-<h2 class="font-display-lg text-headline-md">专业技术认证</h2>
-</div>
-<!-- Highlight certificate -->
-<div class="glass-card rounded-xl overflow-hidden mb-8 border border-primary/20">
-<div class="grid md:grid-cols-2 items-center">
-<div class="p-8 md:p-10">
-<div class="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 rounded-full mb-4">
-<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">verified</span>
-<span class="font-label-sm text-[10px] uppercase text-primary tracking-widest">最新认证</span>
-</div>
-<h3 class="font-display-lg text-headline-md mb-3">阿里达摩院</h3>
-<p class="font-body-lg text-body-lg text-primary-fixed-dim mb-4 font-semibold">认证人工智能训练师（高级）</p>
-<p class="font-body-md text-body-md text-on-surface-variant mb-4">
-已完成达摩院智能客服「人工智能训练师」高级培训课程且认证合格。
-</p>
-<div class="flex flex-wrap gap-4 text-sm text-on-surface-variant">
-<span class="flex items-center gap-1">
-<span class="material-symbols-outlined text-primary text-base" style="font-variation-settings: 'FILL' 1;">badge</span>
-证书编号：AIT250413154243000121
-</span>
-<span class="flex items-center gap-1">
-<span class="material-symbols-outlined text-primary text-base" style="font-variation-settings: 'FILL' 1;">event</span>
-颁证日期：2025-04-13
-</span>
-</div>
-</div>
-<div class="p-4">
-<img src="images/damo-certificate.jpg" loading="lazy" decoding="async" alt="阿里达摩院认证人工智能训练师证书" class="w-full rounded-lg shadow-2xl shadow-primary/10 hover:scale-[1.02] transition-transform duration-500">
-</div>
-</div>
-</div>
-<!-- Other certifications -->
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-<div class="glass-card rounded-xl overflow-hidden group">
-<div class="aspect-[16/10] overflow-hidden bg-surface-container flex items-center justify-center">
-<img src="images/yingdao-certificate.jpg" loading="lazy" decoding="async" alt="影刀高级RPA技能证书" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500">
-</div>
-<div class="p-6 flex items-center gap-4">
-<div class="h-12 w-12 bg-primary/10 rounded-2xl flex items-center justify-center flex-shrink-0">
-<span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
-</div>
-<div>
-<p class="font-label-sm text-label-sm text-on-surface-variant mb-0.5">影刀学院</p>
-<p class="font-label-sm text-label-sm font-semibold">高级 RPA 技能证书</p>
-</div>
-</div>
-</div>
-<div class="glass-card rounded-xl overflow-hidden group">
-<div class="aspect-[16/10] overflow-hidden bg-surface-container flex items-center justify-center">
-<img src="images/huawei-certificate.jpg" loading="lazy" decoding="async" alt="华为HarmonyOS应用开发者基础认证" class="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500">
-</div>
-<div class="p-6 flex items-center gap-4">
-<div class="h-12 w-12 bg-primary/10 rounded-2xl flex items-center justify-center flex-shrink-0">
-<span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings: 'FILL' 1;">cloud</span>
-</div>
-<div>
-<p class="font-label-sm text-label-sm text-on-surface-variant mb-0.5">华为开发者学堂</p>
-<p class="font-label-sm text-label-sm font-semibold">HarmonyOS 应用开发者基础认证</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Teaching Scenes -->
-<section class="py-24 bg-surface-container-lowest/30">
-<div class="max-w-container-max mx-auto px-margin-desktop">
-<div class="text-center mb-16">
-<h2 class="font-display-lg text-headline-md">教学现场<span class="text-primary-fixed-dim">展示</span></h2>
-<p class="font-body-md text-body-md text-on-surface-variant mt-4 max-w-2xl mx-auto">
-真实授课场景，每一节课都全力以赴。
-</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-<div class="glass-card rounded-xl overflow-hidden group">
-<div class="aspect-[4/3] overflow-hidden">
-<img src="images/teaching-1.jpg" loading="lazy" decoding="async" alt="线下实战培训课堂" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-</div>
-<div class="p-5">
-<div class="flex items-center gap-2 mb-2">
-<span class="material-symbols-outlined text-primary text-base" style="font-variation-settings: 'FILL' 1;">groups</span>
-<span class="font-label-sm text-label-sm text-primary uppercase">线下实战</span>
-</div>
-<p class="font-body-md text-body-md text-on-surface-variant">小班制面对面教学，学员现场实操，讲师即时指导答疑。</p>
-</div>
-</div>
-<div class="glass-card rounded-xl overflow-hidden group">
-<div class="aspect-[4/3] overflow-hidden">
-<img src="images/teaching-2.jpg" loading="lazy" decoding="async" alt="品牌活动演讲现场" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-</div>
-<div class="p-5">
-<div class="flex items-center gap-2 mb-2">
-<span class="material-symbols-outlined text-primary text-base" style="font-variation-settings: 'FILL' 1;">campaign</span>
-<span class="font-label-sm text-label-sm text-primary uppercase">活动演讲</span>
-</div>
-<p class="font-body-md text-body-md text-on-surface-variant">受邀出席品牌活动，分享 AI 实战经验与应用方法论。</p>
-</div>
-</div>
-<div class="glass-card rounded-xl overflow-hidden group">
-<div class="aspect-[4/3] overflow-hidden">
-<img src="images/teaching-3.jpg" loading="lazy" decoding="async" alt="技术演示授课" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-</div>
-<div class="p-5">
-<div class="flex items-center gap-2 mb-2">
-<span class="material-symbols-outlined text-primary text-base" style="font-variation-settings: 'FILL' 1;">screen_share</span>
-<span class="font-label-sm text-label-sm text-primary uppercase">技术演示</span>
-</div>
-<p class="font-body-md text-body-md text-on-surface-variant">现场演示 AI 工具操作流程，用简单技术解决复杂问题。</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Featured Courses -->
-<section class="py-24 bg-surface-container-low" id="courses">
-<div class="max-w-container-max mx-auto px-margin-desktop">
-<div class="mb-12">
-<h2 class="font-display-lg text-headline-md">用简单方式<span class="text-primary-fixed-dim">学会 AI</span></h2>
-</div>
-<div class="grid md:grid-cols-3 gap-gutter">
-<!-- Course 1 -->
-<div class="glass-card overflow-hidden flex flex-col">
-<div class="h-48 relative overflow-hidden bg-gradient-to-br from-surface-container-high to-surface-container flex items-center justify-center">
-<div class="absolute top-4 right-4 px-3 py-1 bg-primary text-on-primary rounded font-label-sm text-label-sm">最畅销</div>
-<img src="images/claude-logo.jpg" loading="lazy" decoding="async" alt="Claude" class="h-24 w-auto object-contain opacity-80">
-</div>
-<div class="p-8 flex-1 flex flex-col">
-<div class="flex gap-2 mb-4">
-<span class="bg-surface-container-highest px-2 py-1 rounded text-[10px] font-label-sm text-primary uppercase">编程</span>
-<span class="bg-surface-container-highest px-2 py-1 rounded text-[10px] font-label-sm text-primary uppercase">AI 工具</span>
-</div>
-<h4 class="font-headline-md text-headline-md mb-4 text-glow">Claude Code Skill 从零到一</h4>
-<p class="font-body-md text-body-md text-on-surface-variant mb-8 flex-1">
-                                从零掌握 Claude Code 的核心技能，学会用 AI 编程助手提升开发效率。无需深厚编程基础，手把手带你入门到实战。
-                            </p>
-<button class="w-full border border-primary/30 py-3 font-label-sm text-label-sm uppercase hover:bg-primary hover:text-on-primary transition-all">立即报名</button>
-</div>
-</div>
-<!-- Course 2 -->
-<div class="glass-card overflow-hidden flex flex-col">
-<div class="h-48 relative overflow-hidden bg-gradient-to-br from-surface-container-high to-surface-container flex items-center justify-center">
-<img src="images/coze-logo.jpg" loading="lazy" decoding="async" alt="扣子 Coze" class="h-24 w-auto object-contain opacity-80">
-</div>
-<div class="p-8 flex-1 flex flex-col">
-<div class="flex gap-2 mb-4">
-<span class="bg-surface-container-highest px-2 py-1 rounded text-[10px] font-label-sm text-primary uppercase">工作流</span>
-<span class="bg-surface-container-highest px-2 py-1 rounded text-[10px] font-label-sm text-primary uppercase">新手友好</span>
-</div>
-<h4 class="font-headline-md text-headline-md mb-4 text-glow">Coze 工作流新手教程</h4>
-<p class="font-body-md text-body-md text-on-surface-variant mb-8 flex-1">
-                                零基础学会用 Coze 搭建自动化工作流，将复杂任务拆解为简单节点。让 AI 替你完成重复劳动，效率翻倍。
-                            </p>
-<button class="w-full border border-primary/30 py-3 font-label-sm text-label-sm uppercase hover:bg-primary hover:text-on-primary transition-all">立即报名</button>
-</div>
-</div>
-<!-- Course 3 -->
-<div class="glass-card overflow-hidden flex flex-col">
-<div class="h-48 relative overflow-hidden bg-gradient-to-br from-surface-container-high to-surface-container flex items-center justify-center">
-<img src="images/feishu-logo.jpg" loading="lazy" decoding="async" alt="飞书 Feishu" class="h-24 w-auto object-contain opacity-80">
-</div>
-<div class="p-8 flex-1 flex flex-col">
-<div class="flex gap-2 mb-4">
-<span class="bg-surface-container-highest px-2 py-1 rounded text-[10px] font-label-sm text-primary uppercase">办公提效</span>
-<span class="bg-surface-container-highest px-2 py-1 rounded text-[10px] font-label-sm text-primary uppercase">实战</span>
-</div>
-<h4 class="font-headline-md text-headline-md mb-4 text-glow">AI 办公提效指南</h4>
-<p class="font-body-md text-body-md text-on-surface-variant mb-8 flex-1">
-                                用 AI 工具重塑日常办公流程——文档撰写、数据处理、PPT 制作、邮件回复，每个环节都能用简单方法提速 10 倍。
-                            </p>
-<button class="w-full border border-primary/30 py-3 font-label-sm text-label-sm uppercase hover:bg-primary hover:text-on-primary transition-all">立即报名</button>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Portfolio -->
-<section class="py-24" id="portfolio">
-<div class="max-w-container-max mx-auto px-margin-desktop">
-<div class="mb-12">
-<h2 class="font-display-lg text-headline-md">实战应用案例</h2>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-<!-- Project 1 -->
-<div class="glass-card rounded-xl p-8 group cursor-pointer relative overflow-hidden" onclick="showWatermarkModal()">
-<div class="absolute top-0 right-0 w-48 h-48 bg-primary/10 rounded-full blur-[80px] -mr-24 -mt-24"></div>
-<div class="flex items-center gap-3 mb-4">
-<div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">water_drop</span>
-</div>
-<div>
-<h4 class="font-display-lg text-lg font-semibold">微信去水印小程序</h4>
-<span class="font-label-sm text-[10px] uppercase text-primary tracking-wider">微信生态</span>
-</div>
-</div>
-<p class="font-body-md text-body-md text-on-surface-variant mb-6">
-一键去除微信图片/视频水印，简化内容二次创作流程。用最简单的技术解决日常高频痛点，零门槛上手。
-</p>
-<div class="flex flex-wrap gap-2">
-<span class="font-label-sm text-label-sm text-primary bg-primary/10 px-3 py-1 rounded">小程序</span>
-<span class="font-label-sm text-label-sm text-primary bg-primary/10 px-3 py-1 rounded">图像处理</span>
-<span class="font-label-sm text-label-sm text-primary bg-primary/10 px-3 py-1 rounded">工具型产品</span>
-</div>
-<div class="mt-4 flex items-center gap-1 text-primary text-sm">
-<span class="material-symbols-outlined text-base">qr_code_scanner</span>
-<span class="font-label-sm text-label-sm">点击扫码使用</span>
-</div>
-</div>
-<!-- Project 2 -->
-<div class="glass-card rounded-xl p-8 group cursor-pointer relative overflow-hidden">
-<div class="absolute top-0 right-0 w-48 h-48 bg-secondary/10 rounded-full blur-[80px] -mr-24 -mt-24"></div>
-<div class="flex items-center gap-3 mb-4">
-<div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">edit_note</span>
-</div>
-<div>
-<h4 class="font-display-lg text-lg font-semibold">微信图片添加文字小程序</h4>
-<span class="font-label-sm text-[10px] uppercase text-primary tracking-wider">微信生态</span>
-</div>
-</div>
-<p class="font-body-md text-body-md text-on-surface-variant mb-6">
-为微信图片快速添加自定义文字水印、标注和说明，操作极简。让普通用户也能轻松完成专业图片编辑。
-</p>
-<div class="flex flex-wrap gap-2">
-<span class="font-label-sm text-label-sm text-primary bg-primary/10 px-3 py-1 rounded">小程序</span>
-<span class="font-label-sm text-label-sm text-primary bg-primary/10 px-3 py-1 rounded">图文编辑</span>
-<span class="font-label-sm text-label-sm text-primary bg-primary/10 px-3 py-1 rounded">工具型产品</span>
-</div>
-</div>
-<!-- Project 3 -->
-<div class="glass-card rounded-xl p-8 group cursor-pointer relative overflow-hidden">
-<div class="absolute top-0 right-0 w-48 h-48 bg-primary/10 rounded-full blur-[80px] -mr-24 -mt-24"></div>
-<div class="flex items-center gap-3 mb-4">
-<div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
-</div>
-<div>
-<h4 class="font-display-lg text-lg font-semibold">扣子批量图文生成</h4>
-<span class="font-label-sm text-[10px] uppercase text-primary tracking-wider">AI 应用</span>
-</div>
-</div>
-<p class="font-body-md text-body-md text-on-surface-variant mb-6">
-基于扣子平台实现批量图文内容自动生成，大幅提升自媒体运营效率。用 AI 自动化替代重复劳动，简单技术解决复杂问题。
-</p>
-<div class="flex flex-wrap gap-2">
-<span class="font-label-sm text-label-sm text-primary bg-primary/10 px-3 py-1 rounded">扣子 Coze</span>
-<span class="font-label-sm text-label-sm text-primary bg-primary/10 px-3 py-1 rounded">批量生成</span>
-<span class="font-label-sm text-label-sm text-primary bg-primary/10 px-3 py-1 rounded">AI 自动化</span>
-</div>
-</div>
-<!-- Project 4 -->
-<div class="glass-card rounded-xl p-8 group cursor-pointer relative overflow-hidden" onclick="showApiModal()">
-<div class="absolute top-0 right-0 w-48 h-48 bg-secondary/10 rounded-full blur-[80px] -mr-24 -mt-24"></div>
-<div class="flex items-center gap-3 mb-4">
-<div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
-<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">hub</span>
-</div>
-<div>
-<h4 class="font-display-lg text-lg font-semibold">蓝博 API 中转站</h4>
-<span class="font-label-sm text-[10px] uppercase text-primary tracking-wider">开发者工具</span>
-</div>
-</div>
-<p class="font-body-md text-body-md text-on-surface-variant mb-6">
-为开发者提供统一的 API 中转服务，降低多平台接口对接复杂度。一个入口，简化所有 API 调用，让开发更高效。
-</p>
-<div class="flex flex-wrap gap-2">
-<span class="font-label-sm text-label-sm text-primary bg-primary/10 px-3 py-1 rounded">API 中转</span>
-<span class="font-label-sm text-label-sm text-primary bg-primary/10 px-3 py-1 rounded">开发者服务</span>
-<span class="font-label-sm text-label-sm text-primary bg-primary/10 px-3 py-1 rounded">效率工具</span>
-</div>
-<div class="mt-4 flex items-center gap-1 text-primary text-sm">
-<span class="material-symbols-outlined text-base">open_in_new</span>
-<span class="font-label-sm text-label-sm">点击访问</span>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Testimonials -->
-<section class="py-24">
-<div class="max-w-container-max mx-auto px-margin-desktop">
-<div class="grid md:grid-cols-3 gap-gutter">
-<div class="glass-card p-10 flex flex-col">
-<span class="material-symbols-outlined text-primary text-4xl mb-6 format_quote_hidden" style="display:none;">format_quote</span>
-<p class="font-body-lg text-body-lg text-on-surface italic mb-8 flex-1">
-                            "跟着宋欣老师学完 Claude Code Skill，我从一个完全不懂编程的小白，到现在已经能独立用 AI 工具写自动化脚本了。简单技术真能解决大问题！"
-                        </p>
-<div>
-<div class="font-label-sm text-label-sm font-bold uppercase">刘思远</div>
-<div class="font-label-sm text-[10px] text-on-surface-variant">自媒体运营 · 长沙</div>
-</div>
-</div>
-<div class="glass-card p-10 flex flex-col">
-<span class="material-symbols-outlined text-primary text-4xl mb-6 format_quote_hidden" style="display:none;">format_quote</span>
-<p class="font-body-lg text-body-lg text-on-surface italic mb-8 flex-1">
-                            "Coze 工作流课程太实用了！以前每天花 3 小时做的图文内容，现在用工作流 10 分钟搞定。宋老师的课就是为普通人设计的，零门槛。"
-                        </p>
-<div>
-<div class="font-label-sm text-label-sm font-bold uppercase">张雨涵</div>
-<div class="font-label-sm text-[10px] text-on-surface-variant">电商创业者 · 深圳</div>
-</div>
-</div>
-<div class="glass-card p-10 flex flex-col">
-<span class="material-symbols-outlined text-primary text-4xl mb-6 format_quote_hidden" style="display:none;">format_quote</span>
-<p class="font-body-lg text-body-lg text-on-surface italic mb-8 flex-1">
-                            "AI 办公提效课直接改变了我的工作方式。以前写方案要一整天，现在用 AI 辅助两小时就搞定。宋老师教的方法都是即学即用，绝不绕弯。"
-                        </p>
-<div>
-<div class="font-label-sm text-label-sm font-bold uppercase">陈佳欣</div>
-<div class="font-label-sm text-[10px] text-on-surface-variant">产品经理 · 杭州</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Contact Me -->
-<section class="py-24 bg-surface-container-low/50" id="contact">
-<div class="max-w-container-max mx-auto px-margin-desktop">
-<div class="max-w-2xl mx-auto text-center">
-<h2 class="font-display-lg text-headline-md mb-6">添加微信 <br><span class="text-primary-fixed-dim">开启 AI 之旅</span></h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant mb-12">
-想了解更多课程详情或预约咨询？添加我的微信，随时沟通。
-</p>
-<div class="glass-card p-10 rounded-xl inline-block">
-<div class="flex flex-col items-center gap-6">
-<div class="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center">
-<span class="material-symbols-outlined text-primary text-4xl" style="font-variation-settings: 'FILL' 1;">qr_code_2</span>
-</div>
-<div>
-<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest mb-2">微信号</p>
-<button id="wechat-btn" class="bg-primary text-on-primary font-label-sm text-label-sm uppercase tracking-widest px-8 py-3 rounded-full hover:brightness-110 active:scale-95 transition-all flex items-center gap-2" onclick="navigator.clipboard.writeText('18124221616'); document.getElementById('wechat-btn-text').textContent='已复制！'; setTimeout(()=>{document.getElementById('wechat-btn-text').textContent='点击复制微信号';}, 2000);">
-<span class="material-symbols-outlined text-base">content_copy</span>
-<span id="wechat-btn-text">点击复制微信号</span>
-</button>
-<div class="font-display-lg text-headline-md text-primary-fixed-dim mt-3">18124221616</div>
-</div>
-</div>
-</div>
-<div class="mt-12 flex flex-col md:flex-row justify-center items-center gap-8">
-<div class="flex items-center gap-3">
-<div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">mail</span>
-</div>
-<a href="mailto:1821522570@qq.com" class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors">1821522570@qq.com</a>
-</div>
-<div class="flex items-center gap-3">
-<div class="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center">
-<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">location_on</span>
-</div>
-<span class="font-label-sm text-label-sm text-on-surface-variant">中国长沙</span>
-</div>
-</div>
-</div>
-</div>
-</section>
-</main>
-<!-- Footer -->
-<footer class="bg-surface-container-lowest w-full py-12 border-t border-outline-variant/20">
-<div class="max-w-container-max mx-auto px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-gutter">
-<div class="font-display-lg text-body-lg text-primary">宋欣</div>
-<div class="font-body-md text-body-md text-on-surface-variant">© 2025 宋欣. 专注用简单技术解决复杂问题。</div>
-<div class="flex gap-6">
-<a class="text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100" href="mailto:1821522570@qq.com">邮箱</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#contact">微信</a>
-</div>
-</div>
-</footer>
+<body>
+  <main class="app-shell" id="top">
+    <aside class="sidebar" aria-label="教程章节导航">
+      <a class="brand" href="#top" aria-label="返回教程首页">
+        <span class="brand-mark">WEB</span>
+        <span>
+          <strong>网页制作教程</strong>
+          <small>Design · Code · Deploy</small>
+        </span>
+      </a>
 
-<!-- Watermark Mini Program Modal -->
-<div id="watermark-modal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/60 backdrop-blur-sm" onclick="if(event.target===this)closeWatermarkModal()">
-<div class="glass-card p-8 rounded-xl max-w-sm w-full mx-4 text-center border border-primary/30">
-<div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
-<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">water_drop</span>
-</div>
-<h3 class="font-display-lg text-xl font-semibold mb-2">微信去水印小程序</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mb-6">微信扫码可用，支持豆包去水印</p>
-<div class="bg-surface-container rounded-lg p-4 mb-6 flex items-center justify-center">
-<img src="images/qrcode-watermark.jpg" alt="去水印小程序二维码" class="w-56 h-56 object-contain rounded">
-</div>
-<button onclick="closeWatermarkModal()" class="w-full border border-outline-variant/50 text-on-surface-variant font-label-sm text-label-sm uppercase tracking-widest py-3 rounded-lg hover:bg-surface-container-highest transition-all">关闭</button>
-</div>
-</div>
+      <div class="progress-card">
+        <h1>从 UI 设计到网站上线</h1>
+      </div>
 
-<!-- API Modal -->
-<div id="api-modal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/60 backdrop-blur-sm" onclick="if(event.target===this)closeApiModal()">
-<div class="glass-card p-8 rounded-xl max-w-md w-full mx-4 text-center border border-primary/30">
-<div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
-<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">hub</span>
-</div>
-<h3 class="font-display-lg text-headline-md mb-2">蓝博 API 中转站</h3>
-<p class="font-body-md text-body-md text-on-surface-variant mb-6">复制以下链接，在浏览器中打开访问</p>
-<div class="bg-surface-container rounded-lg p-4 mb-6 flex items-center justify-between gap-3">
-<code class="font-label-sm text-label-sm text-primary-fixed-dim break-all">https://api.lanbuff.top/</code>
-<button onclick="copyApiLink()" class="flex-shrink-0 bg-primary/10 hover:bg-primary/20 text-primary px-3 py-2 rounded-lg transition-colors flex items-center gap-1">
-<span class="material-symbols-outlined text-base" id="copy-icon">content_copy</span>
-<span class="font-label-sm text-[10px] uppercase" id="copy-text">复制</span>
-</button>
-</div>
-<button onclick="closeApiModal()" class="w-full border border-outline-variant/50 text-on-surface-variant font-label-sm text-label-sm uppercase tracking-widest py-3 rounded-lg hover:bg-surface-container-highest transition-all">关闭</button>
-</div>
-</div>
+      <nav class="tab-nav" aria-label="切换教程内容">
+        <button class="tab-btn active" type="button" data-panel="overview"><span>01</span>总览路径</button>
+        <button class="tab-btn" type="button" data-panel="ui"><span>02</span>UI 设计</button>
+        <button class="tab-btn" type="button" data-panel="code"><span>03</span>代码实现</button>
+        <button class="tab-btn" type="button" data-panel="github"><span>04</span>GitHub</button>
+        <button class="tab-btn" type="button" data-panel="deploy"><span>05</span>部署方案</button>
+        <button class="tab-btn" type="button" data-panel="resources"><span>06</span>资源库</button>
+        <button class="tab-btn" type="button" data-panel="checklist"><span>07</span>检查清单</button>
+      </nav>
+    </aside>
 
-<script>
-function showWatermarkModal() {
-    const modal = document.getElementById('watermark-modal');
-    modal.classList.remove('hidden');
-    modal.classList.add('flex');
-}
-function closeWatermarkModal() {
-    const modal = document.getElementById('watermark-modal');
-    modal.classList.add('hidden');
-    modal.classList.remove('flex');
-}
-function showApiModal() {
-    const modal = document.getElementById('api-modal');
-    modal.classList.remove('hidden');
-    modal.classList.add('flex');
-    document.getElementById('copy-icon').textContent = 'content_copy';
-    document.getElementById('copy-text').textContent = '复制';
-}
-function closeApiModal() {
-    const modal = document.getElementById('api-modal');
-    modal.classList.add('hidden');
-    modal.classList.remove('flex');
-}
-function copyApiLink() {
-    navigator.clipboard.writeText('https://api.lanbuff.top/');
-    document.getElementById('copy-icon').textContent = 'check';
-    document.getElementById('copy-text').textContent = '已复制';
-    setTimeout(() => {
-        document.getElementById('copy-icon').textContent = 'content_copy';
-        document.getElementById('copy-text').textContent = '复制';
-    }, 2000);
-}
-</script>
+    <section class="workspace" aria-live="polite">
+      <header class="topbar">
+        <div>
+          <span class="course-label">Interactive Tutorial</span>
+          <h2 id="panel-title">总览路径</h2>
+        </div>
+        <div class="top-actions">
+          <button class="ghost-btn" type="button" id="prevTab">上一节</button>
+          <button class="primary-btn" type="button" id="nextTab">下一节</button>
+        </div>
+      </header>
 
+      <div class="panel-stage">
+        <article class="panel active" id="panel-overview" data-title="总览路径">
+          <div class="panel-grid overview-grid">
+            <section class="hero-card">
+              <span class="section-kicker">学习目标</span>
+              <h3>把一个想法变成可以访问的网站</h3>
+              <p>完整流程分为四步：明确目标、确定 UI、完成代码、部署上线。每一步都产出可检查的结果。</p>
+              <div class="metric-row">
+                <div><strong>7</strong><span>个章节</span></div>
+                <div><strong>4</strong><span>类部署</span></div>
+                <div><strong>1</strong><span>个上线闭环</span></div>
+              </div>
+            </section>
+            <section class="flow-card">
+              <div class="flow-step"><span>1</span><div><b>需求</b><p>明确网站用途、受众和行动目标。</p></div></div>
+              <div class="flow-step"><span>2</span><div><b>UI</b><p>用 Stitch 或模板确定页面风格。</p></div></div>
+              <div class="flow-step"><span>3</span><div><b>代码</b><p>拆分 HTML、CSS、JavaScript。</p></div></div>
+              <div class="flow-step"><span>4</span><div><b>部署</b><p>通过 GitHub Pages 或其他平台发布。</p></div></div>
+            </section>
+          </div>
+          <div class="callout success"><strong>核心方法：</strong>先做出一个能访问、能更新、能部署的静态网站，再逐步加入框架、数据采集、评论采集、PRD 自动化等能力。</div>
+        </article>
 
-</body></html>
+        <article class="panel" id="panel-ui" data-title="UI 设计">
+          <div class="panel-grid two-col">
+            <section class="content-card accent-yellow">
+              <span class="section-kicker">Stitch 工作流</span>
+              <h3>先生成界面，再调整审美方向</h3>
+              <ol class="clean-list">
+                <li>打开 <a href="https://stitch.withgoogle.com/" target="_blank" rel="noreferrer">Google Stitch</a>。</li>
+                <li>输入页面类型、目标用户、内容模块和视觉风格。</li>
+                <li>选择最接近目标的版本，继续修改颜色、版式和模块。</li>
+                <li>将设计结果转化为页面结构和代码任务。</li>
+              </ol>
+            </section>
+            <section class="ui-board">
+              <div class="mock-window">
+                <div class="mock-bar"><span></span><span></span><span></span></div>
+                <div class="mock-body">
+                  <div class="mock-title">Portfolio Tutorial</div>
+                  <div class="mock-cards"><i></i><i></i><i></i><i></i></div>
+                </div>
+              </div>
+              <div class="prompt-card">
+                <b>推荐提示词结构</b>
+                <p>页面类型 + 目标人群 + 内容模块 + 视觉关键词 + 参考网站。</p>
+              </div>
+            </section>
+          </div>
+          <div class="rule-grid">
+            <div class="mini-card"><b>目标清楚</b><span>先判断网站要展示、转化还是沉淀资料。</span></div>
+            <div class="mini-card"><b>风格一致</b><span>字体、颜色、按钮、卡片保持统一。</span></div>
+            <div class="mini-card"><b>信息分层</b><span>标题、说明、步骤、代码示例要有清晰层级。</span></div>
+          </div>
+        </article>
+
+        <article class="panel" id="panel-code" data-title="代码实现">
+          <div class="code-layout">
+            <section class="content-card">
+              <span class="section-kicker">代码分工</span>
+              <h3>静态网页的三件套</h3>
+              <p>先掌握 HTML、CSS、JavaScript 的职责分工，就能理解大多数静态页面。</p>
+              <div class="stack-cards">
+                <div><b>HTML</b><span>负责内容结构</span></div>
+                <div><b>CSS</b><span>负责视觉样式</span></div>
+                <div><b>JS</b><span>负责页面交互</span></div>
+              </div>
+            </section>
+            <section class="code-tabs" aria-label="代码示例">
+              <div class="file-pill-row"><span>index.html</span><span>style.css</span><span>main.js</span></div>
+              <pre><code>&lt;section class="hero"&gt;
+  &lt;h1&gt;网页标题&lt;/h1&gt;
+  &lt;p&gt;说明页面价值&lt;/p&gt;
+  &lt;a href="#panel-resources"&gt;查看资源&lt;/a&gt;
+&lt;/section&gt;</code></pre>
+            </section>
+          </div>
+          <div class="callout"><strong>学习建议：</strong>先让文件能被浏览器打开，再解释为什么需要拆分为 HTML / CSS / JS。</div>
+        </article>
+
+        <article class="panel" id="panel-github" data-title="GitHub">
+          <div class="panel-grid two-col">
+            <section class="content-card accent-blue">
+              <span class="section-kicker">创建仓库</span>
+              <h3>保存代码并管理版本</h3>
+              <ul class="clean-list">
+                <li>打开 <a href="https://github.com/new" target="_blank" rel="noreferrer">github.com/new</a>。</li>
+                <li>Repository name 填 <code>stitch</code> 或自定义项目名。</li>
+                <li>选择 Public，便于使用免费 GitHub Pages。</li>
+                <li>不要勾选 README / .gitignore / License。</li>
+              </ul>
+            </section>
+            <section class="terminal-card">
+              <div class="terminal-top"><span></span><span></span><span></span>Terminal</div>
+              <pre><code>cd ./your-project
+git init
+git add -A
+git commit -m "init website"
+git branch -M main
+git remote add origin https://github.com/your-name/your-repo.git
+git push -u origin main</code></pre>
+            </section>
+          </div>
+          <div class="github-steps">
+            <div><b>1. 创建仓库</b><span>获得远程代码地址。</span></div>
+            <div><b>2. 推送代码</b><span>把本地文件同步到 GitHub。</span></div>
+            <div><b>3. 后续更新</b><span>修改、提交、推送即可同步。</span></div>
+          </div>
+        </article>
+
+        <article class="panel" id="panel-deploy" data-title="部署方案">
+          <div class="deploy-grid">
+            <section class="deploy-card featured"><span>入门推荐</span><h3>GitHub Pages</h3><p>适合静态作品集、课程页、个人主页。路径清晰，和 GitHub 仓库直接关联。</p><b>适用：HTML / CSS / JS</b></section>
+            <section class="deploy-card"><span>域名友好</span><h3>Cloudflare Pages</h3><p>适合绑定自定义域名、连接 GitHub 自动部署。可用于 Astro、静态站和轻量前端项目。</p><b>适用：个人网站 / 品牌站</b></section>
+            <section class="deploy-card"><span>前端项目</span><h3>Vercel</h3><p>适合 Next.js、React 等项目，预览部署体验好。</p><b>适用：现代前端框架</b></section>
+            <section class="deploy-card"><span>替代选择</span><h3>Netlify</h3><p>适合表单、重定向、静态站点部署，配置简单。</p><b>适用：营销页 / 文档站</b></section>
+          </div>
+          <div class="content-card pages-card">
+            <span class="section-kicker">GitHub Pages 设置</span>
+            <ol class="clean-list horizontal">
+              <li>进入仓库 Settings</li>
+              <li>选择左侧 Pages</li>
+              <li>Source 选 Deploy from a branch</li>
+              <li>Branch 选 main / root</li>
+              <li>保存后获得访问地址</li>
+            </ol>
+          </div>
+        </article>
+
+        <article class="panel" id="panel-resources" data-title="资源库">
+          <div class="resource-layout">
+            <section class="resource-column">
+              <h3>国外优质免费模板</h3>
+              <a href="https://html5up.net" target="_blank" rel="noreferrer"><b>HTML5 UP</b><span>作品集、企业官网、单页落地页</span></a>
+              <a href="https://templatemo.com" target="_blank" rel="noreferrer"><b>TemplateMo</b><span>分类清晰，适合快速改造</span></a>
+              <a href="https://colorlib.com" target="_blank" rel="noreferrer"><b>Colorlib</b><span>视觉现代，动态效果丰富</span></a>
+              <a href="https://bootstrapmade.com" target="_blank" rel="noreferrer"><b>BootstrapMade</b><span>Bootstrap 生态，代码规整</span></a>
+            </section>
+            <section class="resource-column">
+              <h3>中文与参考资源</h3>
+              <a href="https://www.tooplate.com/live/2154_split_portfolio" target="_blank" rel="noreferrer"><b>Split Portfolio</b><span>适合作品集参考</span></a>
+              <a href="https://sc.chinaz.com" target="_blank" rel="noreferrer"><b>站长素材</b><span>中文模板、企业站、源码资源</span></a>
+              <a href="https://wordpress.org/themes" target="_blank" rel="noreferrer"><b>WordPress 主题库</b><span>博客、企业站、电商站</span></a>
+              <a href="https://onepagelove.com" target="_blank" rel="noreferrer"><b>One Page Love</b><span>单页网站设计灵感</span></a>
+            </section>
+          </div>
+        </article>
+
+        <article class="panel" id="panel-checklist" data-title="检查清单">
+          <div class="check-layout">
+            <section class="content-card accent-green">
+              <span class="section-kicker">上线前确认</span>
+              <h3>从能打开到可分享</h3>
+              <p>上线前逐项检查，避免图片丢失、链接失效、移动端错位和部署路径错误。</p>
+            </section>
+            <section class="checklist">
+              <label><input type="checkbox"> 页面主题、标题、说明清晰</label>
+              <label><input type="checkbox"> UI 风格统一，按钮和卡片一致</label>
+              <label><input type="checkbox"> 图片、CSS、JS 路径正确</label>
+              <label><input type="checkbox"> 链接和导航可以正常跳转</label>
+              <label><input type="checkbox"> 手机端布局不拥挤</label>
+              <label><input type="checkbox"> GitHub Pages 或其他平台已部署</label>
+            </section>
+          </div>
+          <div class="final-model">
+            <b>最终心智模型</b>
+            <span>需求 → UI → 代码 → GitHub → 静态部署 → 持续更新</span>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/main.js?v=single-screen-2"></script>
+</body>
+</html>
